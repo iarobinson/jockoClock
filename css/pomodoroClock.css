@@ -1,0 +1,13 @@
+body {
+  font-family: sans-serif;
+}
+
+h2 {
+  font-family: inherit;
+  font-size: 30px;
+}
+
+p {
+  font-family: inherit;
+  font-size: 16px;
+}
