@@ -1,19 +1,12 @@
-// function startClock() {
-//   console.log('Clock Started');
-// }
-
-var countDownDate = new Date("Sep 5, 2018 15:37:25").getTime();
+var secondsToGo = 60;
 
 var x = setInterval(function() {
-  var now = new Date().getTime();
-  var distance = now - Math.pow(1.5, 6);
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  document.getElementById("timeDisplay").innerHTML = Math.floor((secondsToGo / 60)) + "m " + (secondsToGo % 60) + "s";
 
-  document.getElementById("timeDisplay").innerHTML = minutes + "m " + seconds + "s ";
-
-  if (distance < 0) {
+  secondsToGo -=1;
+  
+  if (secondsToGo < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+    document.getElementById("timeDisplay").innerHTML = "<p id='expired'>EXPIRED<p>";
   }
 }, 1000);

@@ -1,11 +1,10 @@
 body {
   font-family: sans-serif;
-  align-content: center;
 }
 
 h2 {
   font-family: inherit;
-  font-size: 30px;
+  font-size: 60px;
 }
 
 p {
@@ -15,4 +14,9 @@ p {
 
 #timeDisplay {
   font-size: 40px;
+}
+
+#expired {
+  font-size: 100px;
+  color: red;
 }
