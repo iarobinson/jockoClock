@@ -3,8 +3,10 @@ body {
 }
 
 h2 {
+  color: white;
   font-family: inherit;
   font-size: 60px;
+  text-align: center;
 }
 
 p {
@@ -12,8 +14,25 @@ p {
   font-size: 16px;
 }
 
+html {
+    height: 100%;
+}
+
+body {
+  background-image: url('http://ianrobinson.net/wp-content/uploads/2018/01/jockoWatch.jpeg');
+  background-repeat: no-repeat;
+  background-position: center; 
+}
+
 #timeDisplay {
+  padding-top: 300px;
   font-size: 40px;
+  text-align: center;
+}
+
+#dayDisplay {
+  font-size: 40px;
+  text-align: center;
 }
 
 #expired {
