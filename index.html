@@ -7,18 +7,20 @@
   <link rel='stylesheet' href='css/pomodoroClock.css'>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
   <script src="js/pomodoroClock.js" type="text/javascript"></script>
-</head>
+</head> 
+
+<!-- Comment this out to avoid listening to audio too much while programming -->
 <!-- <audio src="getAfterIt.mp3" type="audio/mpeg" autoplay="autoplay"></audio> -->
+
 <audio id="warpath" src="warpath.mp3" type="audio/mpeg"></audio>
-<body id="jockoWatch">
-  <div id="watchReadings">
-    <center>
-      <p id="timeDisplay">Get. After. It.</p>
-      <p id="dayDisplay"></p>
-    </center>
-  </div>
-  <div>
-    <button id="resetClock">reset clock</button>
+
+<body>
+  <input type="button" value="reset clock" onClick="window.location.reload()">
+  <div class="center">
+    <p id="timeDisplay">Get. After. It.</p><p id="dayDisplay"></p>
   </div>
 </body>
+<div id='footer'>
+  <a href="http://ianrobinson.net/jokoclock">learn more</a>
+</div>
 </html>
