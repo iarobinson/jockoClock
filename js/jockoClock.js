@@ -15,7 +15,10 @@ function resetClock() {
 }
 
 function setCustomMinutes() {
-  var desiredTime = parseInt(document.getElementById("newTime").value);
+  if (secondsToGo === -1) {
+    location.reload();
+  }
+  var desiredTime = parseInt(document.getElementById("newTime").value) * 60;
   secondsToGo = desiredTime;
 }
 
@@ -45,8 +48,8 @@ $(document).ready(function() {
     // What to do when the minutes have counted down
     if (secondsToGo < 0) {
       // Comment this out to avoid listening to the audio too much while programming
-      // document.getElementById("warpath").play();
       
+      document.getElementById("warpath").play();
       document.getElementById("timeDisplay").innerHTML = "<p id='expired'>EXPIRED<p>";
       document.getElementById("dayDisplay").innerHTML = '';
       clearInterval(runTime);
