@@ -4,11 +4,11 @@
   <head>
     <title>A self timer for improved productivity in specified time increments.</title>
     <meta name="description" content="A tool to avoid procrastination by doing work to a timer in specified batches.">
+    <link rel='stylesheet' href='css/bootstrap.css'>
     <link rel='stylesheet' href='css/pomodoroClock.css'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
     <script src="js/jockoClock.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </head> 
 
   <!-- Comment this out to avoid listening to audio too much while programming -->
@@ -16,16 +16,18 @@
   <!-- <audio id="warpath" src="warpath.mp3" type="audio/mpeg"></audio> -->
 
   <body>  
-    <div class="center">
-      <p id="timeDisplay">Get. After. It.</p><p id="dayDisplay"></p>
-      <form>
-        <input type="number" value="" name="customMinutes" id="newTime" >
-        <input type="button" value="Custom Minutes" onclick="setCustomMinutes()">
-        <input type="button" value="Reset Clock" onClick="resetClock()">
-      </form>
+    <div class="bg">
+      <div class="center align-middle">
+        <p id="timeDisplay">Get. After. It.</p><p id="dayDisplay"></p>
+        <form>
+          <input type="number" id="newTime" min="1" max="500" >
+          <input type="button" value="Start Custom Minutes" onclick="setCustomMinutes()">
+          <input type="button" value="Reset Clock" onClick="resetClock()">
+        </form>
+      </div>
     </div>
   </body>
   <div id='footer'>
-    <a id="learnMore" href="http://ianrobinson.net/jocko-clock">learn more</a>
+    <a href="http://ianrobinson.net/jocko-clock" target="_blank" id="learnMore">learn more</a>
   </div>
 </html>

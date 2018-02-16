@@ -8,12 +8,15 @@ var secondsToGo = 1500;
 
 // Happens when reset clock button is clicked
 function resetClock() {
+  if (secondsToGo === -1) {
+    location.reload();
+  }
   secondsToGo = 1500;
 }
 
 function setCustomMinutes() {
   var desiredTime = parseInt(document.getElementById("newTime").value);
-  secondsToGo = desiredTime * 60;
+  secondsToGo = desiredTime;
 }
 
 // Displays 00 rather than 01 for seconds and 04 seconds rather than 4
@@ -30,24 +33,22 @@ function displaySeconds(seconds) {
 }
 
 $(document).ready(function() {
-  // Clock Operation and Display
   
+  // Clock Operation and Display
   var runTime = setInterval(function() {
     // Renders time to watch display
     document.getElementById("timeDisplay").innerHTML = day + "    " + Math.floor((secondsToGo / 60)) + ":" + displaySeconds(secondsToGo);
     
     // Decrements the time to go
-    secondsToGo -=1;
-    console.log("in interval->", secondsToGo);
+    secondsToGo -= 1;
     
     // What to do when the minutes have counted down
     if (secondsToGo < 0) {
       // Comment this out to avoid listening to the audio too much while programming
       // document.getElementById("warpath").play();
-      console.log('if statement triggered');
+      
       document.getElementById("timeDisplay").innerHTML = "<p id='expired'>EXPIRED<p>";
       document.getElementById("dayDisplay").innerHTML = '';
-      
       clearInterval(runTime);
     }
   }, 1000);

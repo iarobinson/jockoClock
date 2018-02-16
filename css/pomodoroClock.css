@@ -1,18 +1,13 @@
-html {
+body, html {
     height: 100%;
 }
 
-a {
-  color: #0c0c0c;
-}
-
-body {
-  font-family: sans-serif;
+.bg {
   background-image: url('http://ianrobinson.net/wp-content/uploads/2018/01/jockoWatch.jpeg');
-  background-repeat: no-repeat;
+  height: 100%;
   background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
-  align-content: center;
 }
 
 .center { 
@@ -50,5 +45,5 @@ body {
 }
 
 #learnMore {
-  color: #0c0c0c;
+  color: #a9a9a9;
 }
