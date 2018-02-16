@@ -6,23 +6,22 @@
     <meta name="description" content="A tool to avoid procrastination by doing work to a timer in specified batches.">
     <link rel='stylesheet' href='css/pomodoroClock.css'>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <script src="js/pomodoroClock.js" type="text/javascript"></script>
+    <script src="js/jockoClock.js" type="text/javascript"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </head> 
 
   <!-- Comment this out to avoid listening to audio too much while programming -->
   <!-- <audio src="getAfterIt.mp3" type="audio/mpeg" autoplay="autoplay"></audio> -->
-
-  <audio id="warpath" src="warpath.mp3" type="audio/mpeg"></audio>
+  <!-- <audio id="warpath" src="warpath.mp3" type="audio/mpeg"></audio> -->
 
   <body>  
-    <!-- <input type="button" value="reset clock" onClick="window.location.reload()"> -->
     <div class="center">
       <p id="timeDisplay">Get. After. It.</p><p id="dayDisplay"></p>
       <form>
-        <input type="text" value="" id="newTime">
-        <input type="submit" value="Custom Minutes" onclick="setTimer(document.getElementById('newTime').value)">
+        <input type="number" value="" name="customMinutes" id="newTime" >
+        <input type="button" value="Custom Minutes" onclick="setCustomMinutes()">
+        <input type="button" value="Reset Clock" onClick="resetClock()">
       </form>
     </div>
   </body>

@@ -3,7 +3,7 @@ html {
 }
 
 a {
-  color: grey;
+  color: #0c0c0c;
 }
 
 body {
@@ -50,5 +50,5 @@ body {
 }
 
 #learnMore {
-  color: grey;
+  color: #0c0c0c;
 }
